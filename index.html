@@ -32,7 +32,7 @@
 <body>
   <span id="bgimage" class="background"></span>
   <div class="time"><span id="time">00:00</span></div>
-  <div class="links"><img src="https://tresre.dev/newtab/assets/icons/github.png" width="25" height="25" style="top: -20px;"> Social</div>
+  <div class="links"><img src="https://tresre.dev/newtab/assets/icons/github.png" width="22" height="22" style="margin-top: 10px;"> Social</div>
 </body>
 
 <script>
@@ -48,7 +48,8 @@ function updateTime() {
 updateTime();
 setInterval(updateTime, 1000);
 
-img = Math.floor(Math.random() * 21);
+img = Math.floor(Math.random() * 20) + 1;
+console.log(img);
 document.getElementById("bgimage").innerHTML = "<img src='https://tresre.dev/newtab/assets/img/" + img + ".png' style='height:100vh; width: 100vw; object-fit: cover;'>";
 </script>
 
