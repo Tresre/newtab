@@ -40,7 +40,7 @@ function updateTime() {
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
-  if (hours > 12) {hours = (hours - 12);} else {if (hours > 11) {var ampm = "pm";} else {var ampm = "am";}}
+  if (hours > 12) {hours = (hours - 12); ampm = "pm";} else {if (hours > 11) {var ampm = "pm";} else {var ampm = "am";}}
   
   if (minutes < 10) {minutes = ("0" + minutes);}
   document.getElementById("time").innerHTML = (hours + ":" + minutes + ampm);
