@@ -13,10 +13,24 @@
     }
 	.time {
       font-family: Jost;
-      font-size: 15vw;
-      max-font-size: 110px;
+      font-size: 110px;
       color: white;
       text-align: center;
+    }
+    @media screen and (min-width: 0px) {
+      .time {
+        font-size: 50px;
+      }
+    } 
+    @media screen and (min-width: 350px) {
+      .time {
+        font-size: 15vw;
+      }
+    }
+    @media screen and (min-width: 700px) {
+      .time {
+        font-size: 110px;
+      }
     }
     .links {
       font-family: Titillium Web;
