@@ -20,11 +20,16 @@
       color: white;
       text-align: center;
     }
+    .background {
+      text-align: center;
+      z-index: -1;
+    }
 </style>
 
 <body>
-	<div class="time"><span id="time">00:00</span></div>
-    <div class="links">Social</div>
+  <span id="bgimage"></span>
+  <div class="time"><span id="time">00:00</span></div>
+  <div class="links">Social</div>
 </body>
 
 <script>
@@ -39,6 +44,10 @@ function updateTime() {
 }
 updateTime();
 setInterval(updateTime, 1000);
+
+img = Math.floor(Math.random() * 21);
+
+document.getElementById("bgimage").innerHTML = "<img src='https://tresre.dev/newtab/assets/img/" + img + ".png' style='width:100%'>";
 </script>
 
 </html>
