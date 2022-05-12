@@ -28,11 +28,15 @@
 </body>
 
 <script>
-const date = new Date();
-let hours = date.getHours();
-let minutes = date.getMinutes();
-if (hours > 12) {hours = (hours - 12); var ampm = "pm";} else {var ampm = "am";}
-document.getElementById("time").innerHTML = (hours + ":" + minutes + ampm);
+function updateTime() {
+  const date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  if (hours > 12) {hours = (hours - 12); var ampm = "pm";} else {var ampm = "am";}
+  document.getElementById("time").innerHTML = (hours + ":" + minutes + ampm);
+}
+updateTime();
+setInterval(updateTime(), 1000);
 </script>
 
 </html>
