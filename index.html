@@ -31,8 +31,8 @@
 const date = new Date();
 let hours = date.getHours();
 let minutes = date.getMinutes();
-console.log(hours + ":" + minutes);
-document.getElementById("time").innerHTML = (hours + ":" + minutes);
+if (hours > 12) {hours = (hours - 12); var ampm = "pm";} else {var ampm = "am";}
+document.getElementById("time").innerHTML = (hours + ":" + minutes + ampm);
 </script>
 
 </html>
