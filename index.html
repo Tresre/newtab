@@ -23,7 +23,7 @@
 </style>
 
 <body>
-	<div class="time"><span id="time">07:24</span></div>
+	<div class="time"><span id="time">00:00</span></div>
     <div class="links">Social</div>
 </body>
 
@@ -32,11 +32,13 @@ function updateTime() {
   const date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
-  if (hours > 12) {hours = (hours - 12); var ampm = "pm";} else {var ampm = "am";}
+  if (hours > 12) {hours = (hours - 12);} else {if (hours > 11) {var ampm = "pm";} else {var ampm = "am";}}
+  
+  if (minutes < 10) {minutes = ("0" + minutes);}
   document.getElementById("time").innerHTML = (hours + ":" + minutes + ampm);
 }
 updateTime();
-setInterval(updateTime(), 1000);
+setInterval(updateTime, 1000);
 </script>
 
 </html>
