@@ -1,0 +1,8 @@
+@font-face {
+  font-family: 'Sentic Text Bold';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(tresre.dev/newtab/assets/font/Sentic_Text_Bold.otf) format('otf');
+  unicode-range: U+1F00-1FFF;
+}
