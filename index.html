@@ -49,7 +49,15 @@
       position: fixed;
       bottom: 0;
       padding: 10px;
-      
+    }
+    .weatherwidget-io {
+      text-align: center;
+      border-radius: 30px;
+      width: 70%;
+      min-width: 200px;
+      max-width: 500px;
+      margin: auto;
+      margin-top: 30px;
     }
     form {
       text-align: center;
@@ -83,10 +91,13 @@
   <br><br><form method="GET" action="https://www.google.com/search">
     <input placeholder="Search Google..." name="q" type="text">
   </form>
+  <a class="weatherwidget-io" href="https://forecast7.com/en/40d71n74d01/new-york/?unit=us" data-label_1="New York" data-label_2="Weather" data-font="Noto Sans" data-icons="Climacons Animated" data-mode="Forecast" data-days="3" data-theme="weather_one" >New York Weather</a>
   <a class="github" href="https://github.com/tresre/newtab"><img src="https://tresre.dev/newtab/assets/icons/github.png" width="25" height="25" style="cursor: pointer;"></a>
 </body>
 
 <script>
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+
 function updateTime() {
   const date = new Date();
   let day = date.getDate();
