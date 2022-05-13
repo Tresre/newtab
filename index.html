@@ -79,7 +79,7 @@
 <body>
   <span id="bgimage" class="background"></span>
   <div class="time"><span id="time">12:00pm</span></div>
-  <div class="links">GitHub</div>
+  <div class="links"><span id="date">Date</span></div>
   <br><br><form method="GET" action="https://www.google.com/search">
     <input placeholder="Search Google..." name="q" type="text">
   </form>
@@ -89,12 +89,16 @@
 <script>
 function updateTime() {
   const date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth();
+  let year = date.getFullYear();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   if (hours > 12) {hours = (hours - 12); ampm = "pm";} else {if (hours > 11) {var ampm = "pm";} else {var ampm = "am";}}
   
   if (minutes < 10) {minutes = ("0" + minutes);}
   document.getElementById("time").innerHTML = (hours + ":" + minutes + ampm);
+  document.getElementById("date").innerHTML = (month + "/" + day + "/" + year);
 }
 updateTime();
 setInterval(updateTime, 1000);
