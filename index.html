@@ -45,6 +45,12 @@
       margin: -8px;
       opacity: 0.9;
     }
+    .github {
+      position: fixed;
+      bottom: 0;
+      padding: 10px;
+      
+    }
     form {
       text-align: center;
     }
@@ -73,10 +79,11 @@
 <body>
   <span id="bgimage" class="background"></span>
   <div class="time"><span id="time">12:00pm</span></div>
-  <div class="links"><img src="https://tresre.dev/newtab/assets/icons/github.png" width="22" height="22"> GitHub</div>
+  <div class="links">GitHub</div>
   <br><br><form method="GET" action="https://www.google.com/search">
     <input placeholder="Search Google..." name="q" type="text">
   </form>
+  <div class="github"><img src="https://tresre.dev/newtab/assets/icons/github.png" width="25" height="25" style="cursor: pointer;" href="github.com/tresre/newtab"></div>
 </body>
 
 <script>
