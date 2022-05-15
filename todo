@@ -1,0 +1,13 @@
+var c = document.getElementById("coords");
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(getCoords);
+  } else {
+    c.innerHTML = "Coords";
+  }
+}
+
+function getCoords(position) {
+  c.innerHTML = "La: " + position.coords.latitude +
+  "<br>Lo: " + position.coords.longitude;
+}
