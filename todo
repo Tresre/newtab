@@ -1,3 +1,5 @@
+api.openweathermap.org
+
 var c = document.getElementById("coords");
 function getLocation() {
   if (navigator.geolocation) {
