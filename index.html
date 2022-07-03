@@ -123,7 +123,7 @@ function updateTime() {
   let hours = date.getHours();
   let minutes = date.getMinutes();
   if (hours > 12) {hours = (hours - 12); ampm = "pm";} else {if (hours > 11) {var ampm = "pm";} else {var ampm = "am";}}
-  
+  if (hours < 1) {hours = 12;}
   if (minutes < 10) {minutes = ("0" + minutes);}
   document.getElementById("time").innerHTML = (hours + ":" + minutes + ampm);
   document.getElementById("date").innerHTML = (month + "/" + day + "/" + year);
